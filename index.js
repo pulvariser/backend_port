@@ -8,7 +8,10 @@ dotenv.config();  // Loads environment variables from .env file
 const app = express();
 const PORT = process.env.PORT || 5000;
 
-app.use(cors());
+app.use(cors({
+    origin: ['https://myport-blush.vercel.app'], // Allow only this origin
+    methods: ['GET', 'POST'], // Specify allowed methods
+  }));
 app.use(express.json());  // Parses incoming JSON requests
 
 // Routes
