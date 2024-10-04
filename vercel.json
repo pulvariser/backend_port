@@ -1,6 +1,6 @@
 {
   "version": 2,
   "routes": [
-    { "src": "/api/(.*)", "dest": "/api/sendEmail.js" }
+    { "src": "/api/sendEmail", "dest": "/api/sendEmail.js" }
   ]
 }
